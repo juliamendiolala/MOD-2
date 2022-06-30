@@ -37,7 +37,7 @@ def shift_letter(letter, shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    if letter == " " or shift == _:
+    if letter == " ":
         z= letter
     
     else:
@@ -103,11 +103,11 @@ def shift_by_letter(letter, letter_shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    if letter == " " or shift == _:
+    if letter == " " :
         z= letter
     
     else:
-        z = chr(ord(letter)+(ord(letter_shift)-65)
+        z = chr(ord(letter)+(ord(letter_shift)-65))
     
     return(z)
 
