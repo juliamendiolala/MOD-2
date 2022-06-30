@@ -65,7 +65,7 @@ def caesar_cipher(message, shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    import string
+    '''import string
     
     a= string.ascii_uppercase
     shifts = a[shift:] + a[:shift]
@@ -73,7 +73,25 @@ def caesar_cipher(message, shift):
     
     result = message.translate(table)
         
-    return(result)
+    return(result)'''
+    
+    result=['']
+    
+    messageint = [ord(i) for i in message]
+    
+    
+    for j in range(len(message)):
+        if message[j] ==' ':
+            result.append(' ')
+        else:
+            
+            result.append( chr((((messageint[j])-ord('A') + (shift))%26 )+65))
+        
+        
+        
+    return(''.join(result))
+    
+    
 
 def shift_by_letter(letter, letter_shift):
     '''Shift By Letter. 
