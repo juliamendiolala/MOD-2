@@ -41,7 +41,7 @@ def shift_letter(letter, shift):
         z= letter
     
     else:
-        z = chr(ord(letter) + shift)
+        z = chr(((ord(letter)-ord('A') + (shift))%26 )+65)
     
     return(z)
 
@@ -103,11 +103,13 @@ def shift_by_letter(letter, letter_shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    if letter == " " :
+    import string
+    if letter == " ":
         z= letter
     
     else:
-        z = chr(ord(letter)+(ord(letter_shift)-65))
+        z = chr((((ord(letter)-ord('A') + (ord(letter_shift)-65))%26 )+65))
+    
     
     return(z)
 
