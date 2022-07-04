@@ -236,6 +236,8 @@ def scytale_cipher(message, shift):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
+    '''
+    2nd attempt:
     for i in range(shift):
         if len(message)%shift == 0:
             x = message
@@ -244,13 +246,31 @@ def scytale_cipher(message, shift):
             x = message +'_'
             break
     
-    result = ['-'] * len(x)
+    result = list(x)
     for j in range(len(x)):
         
         result[j%(len(x)//shift) * shift + j//(len(x)//shift)] = x[j]
         
     
-    return("".join(result))
+    return("".join(result))'''
+    
+    for i in range(shift):
+        if len(message)%shift == 0:
+            x = message
+            break 
+        else:
+            x = message +'_'
+            break
+    
+    result =''
+    for j in range(len(x)):
+        
+        y = x[(j//shift) + (len(x)//shift) * (j%shift)]
+        
+        result += y
+        
+    
+    return((result))
 
 def scytale_decipher(message, shift):
     '''Scytale De-cipher.
@@ -287,7 +307,7 @@ def scytale_decipher(message, shift):
             x = message +'_'
             break
     
-    result = ['-'] * len(x)
+    result = list(x)
     for j in range(len(x)):
         
         result[j%(len(x)//(len(x)//shift)) * (len(x)//shift) + j//(len(x)//(len(x)//shift))] = x[j]
