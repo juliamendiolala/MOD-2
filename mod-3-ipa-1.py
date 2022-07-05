@@ -256,11 +256,11 @@ def scytale_cipher(message, shift):
     
     for i in range(shift):
         if len(message)%shift == 0:
-            x = message
-            break 
-        else:
-            x = message +'_'
+            x = message 
             break
+        else:
+            message += '_'
+        
     
     result =''
     for j in range(len(x)):
@@ -270,7 +270,7 @@ def scytale_cipher(message, shift):
         result += y
         
     
-    return((result))
+    return(result)
 
 def scytale_decipher(message, shift):
     '''Scytale De-cipher.
