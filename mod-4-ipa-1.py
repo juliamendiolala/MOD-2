@@ -84,12 +84,12 @@ def tic_tac_toe(board):
     #diagonal downwards
 
     if len(set(list(board[i][i] for i,v in enumerate(board)))) ==1:
-        winner = (board[1][1])
+        winner = (board[0][0])
 
     #diagonal upwards
 
     if len(set(list(board[i][len(board)-1-i]for i,v in enumerate(board)))) ==1:
-        winner = board[1][len(board)-1]
+        winner = board[0][len(board)-1]
     
     if winner == '': 
         return( "NO WINNER")
